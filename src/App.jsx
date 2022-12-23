@@ -4,7 +4,7 @@ import WeatherWidget from "./components/WeatherWidget/WeatherWidget";
 import { WEATHER_API_URL, weather_api_key } from "./_api";
 
 function App() {
-	let [crrWeather, setCrrWeather] = useState({});
+	let [crrWeather, setCrrWeather] = useState(null);
 
 	function _onSearch(searchInput) {
 		const [lat, lon] = searchInput.value.split(" ");
