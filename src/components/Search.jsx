@@ -1,19 +1,18 @@
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
-import { GEO_API_URL, geoApiCities } from "../_api_geo";
+import { GEO_API_URL, geoApiCities } from "../_api";
 
-export default function SearchForm({ searchChange }) {
+export default function Search({ onSearch }) {
 	const [city, setCity] = useState(null);
 
 	const handleChange = (searchInput) => {
-		// console.log(searchInput);
 		setCity(searchInput);
-		searchChange(searchInput);
+		onSearch(searchInput);
 	};
 
 	const handleOptions = (searchInput) => {
 		return fetch(
-			`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${searchInput}`,
+			`${GEO_API_URL}/cities?minPopulation=100000&namePrefix=${searchInput}`,
 			geoApiCities
 		)
 			.then((response) => response.json())
@@ -36,8 +35,7 @@ export default function SearchForm({ searchChange }) {
 				placeholder="Search for City"
 				debounceTimeout={600}
 				onChange={(event) => {
-					setCity(event);
-					searchChange(city);
+					handleChange(event);
 				}}
 				value={city}
 				loadOptions={handleOptions}
