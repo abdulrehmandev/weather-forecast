@@ -19,6 +19,7 @@ $padding: 1rem 3rem;
 .crr__body {
 	margin-top: 1rem;
 	align-items: flex-end;
+	gap: 2rem;
 }
 
 .crr__header-title {
@@ -60,7 +61,7 @@ $padding: 1rem 3rem;
 // }
 
 .crr__details {
-	max-width: 200px;
+	max-width: 250px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -74,11 +75,10 @@ $padding: 1rem 3rem;
 	}
 }
 
-@media (max-width: 678px) {
+@media (max-width: 700px) {
 	.crr__body {
 		flex-direction: column;
 		align-items: flex-start;
-		gap: 2rem;
 	}
 
 	.crr__main-content {

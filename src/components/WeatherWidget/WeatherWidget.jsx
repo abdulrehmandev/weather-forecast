@@ -17,7 +17,7 @@ export default function WeatherWidget({ data }) {
 					<h3 className="crr__main-location">{data.location}</h3>
 					<div className="crr__main-content">
 						<div className="crr__main-left">
-							<h1 className="crr__main-temp">{Math.round(data.temp)}°C</h1>
+							<h1 className="crr__main-temp">{Math.round(data.temp)}°</h1>
 							<p className="crr__main-statement">{data.main}</p>
 						</div>
 						<img
