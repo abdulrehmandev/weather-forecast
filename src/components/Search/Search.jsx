@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
-import { GEO_API_URL, geoApiCities } from "../_api";
+import { GEO_API_URL } from "../../_api";
+import { geoApiCities } from "../../_api_key";
 
 export default function Search({ onSearch }) {
-	const [city, setCity] = useState(null);
+	let [city, setCity] = useState(null);
 
 	const handleChange = (searchInput) => {
 		setCity(searchInput);

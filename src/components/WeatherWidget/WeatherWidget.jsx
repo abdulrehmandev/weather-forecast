@@ -5,6 +5,7 @@ export default function WeatherWidget({ data }) {
 		const time = new Date(unixTime * 1000);
 		return time.toLocaleTimeString("en-US");
 	}
+
 	return (
 		<section className="crr-weather">
 			<div className="crr__header">
@@ -49,3 +50,12 @@ export default function WeatherWidget({ data }) {
 		</section>
 	);
 }
+
+// export default function WeatherWidget({data}) {
+// 	console.log(data)
+// 	return (
+// 		<div className="wea">
+// 			{ data && 'weather'}
+// 		</div>
+// 	)
+// }
