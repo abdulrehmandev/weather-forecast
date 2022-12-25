@@ -24,7 +24,9 @@ body {
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
-	background: grey;
+	background-color: #f8f8ff;
+	position: relative;
+	padding-bottom: 3rem;
 }
 
 a:not([class]) {
@@ -49,4 +51,9 @@ select {
 	width: min(var(--max-width), 100% - 3rem);
 	margin-inline: auto;
 	padding-block: 1rem;
+}
+
+.help-text {
+	margin: 2rem auto;
+	text-align: center;
 }

@@ -1,0 +1,11 @@
+.footer {
+	display: flex;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	margin-block: 1rem;
+	position: absolute;
+	inset: auto 0 0;
+	.footer__link {
+		color: #ff416c;
+	}
+}

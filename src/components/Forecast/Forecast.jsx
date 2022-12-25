@@ -17,7 +17,7 @@ export default function Forecast({ data }) {
 							<p className="forecast__day-temp">{el.temp}°</p>
 							<p className="forecast__day-low">{el.min}°</p>
 						</div>
-						<p className="forecast__day-main">{el.main}Cloudy</p>
+						<p className="forecast__day-main">{el.main}</p>
 					</div>
 				))}
 			</div>

@@ -1,9 +1,11 @@
 import { useState } from "react";
+import PrimaryHeader from "./components/PrimaryHeader/PrimaryHeader";
 import Forecast from "./components/Forecast/Forecast";
 import Search from "./components/Search/Search";
 import WeatherWidget from "./components/WeatherWidget/WeatherWidget";
+import Footer from "./components/Footer/Footer";
 import { WEATHER_API_URL } from "./_api";
-import { weather_api_key } from "./_api_key";
+import { weather_api_key } from "./config";
 
 function App() {
 	let [crrWeather, setCrrWeather] = useState(null);
@@ -24,7 +26,9 @@ function App() {
 			.then((response) => {
 				const _data = {
 					location: searchInput.label,
-					temp: response.main.temp,
+					temp: Math.round(response.main.temp),
+					feels_like: Math.round(response.main.feels_like),
+					visibility: response.visibility,
 					main: response.weather[0].main,
 					icon: response.weather[0].icon,
 					humidity: response.main.humidity,
@@ -63,9 +67,14 @@ function App() {
 
 	return (
 		<div className="container">
+			<PrimaryHeader />
 			<Search onSearch={_onSearch} />
+			{!crrWeather && (
+				<p className="help-text">Search city to get weather forecast.</p>
+			)}
 			{crrWeather && <WeatherWidget data={crrWeather} />}
 			{forecast && <Forecast data={forecast} />}
+			<Footer />
 		</div>
 	);
 }

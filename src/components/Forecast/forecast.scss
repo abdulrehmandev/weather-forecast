@@ -7,6 +7,8 @@ $padding: 1rem 3rem;
 	border-radius: $border-radius;
 	padding: $padding;
 	background-color: #fff;
+	border: 1px solid rgb(0, 0, 0, 0.2);
+	box-shadow: 2px 3px 7px rgb(0, 0, 0, 0.05);
 }
 
 .forecast__title {

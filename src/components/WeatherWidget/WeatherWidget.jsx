@@ -1,61 +1,39 @@
 import "./weather-widget.scss";
 
 export default function WeatherWidget({ data }) {
-	function convertUnix(unixTime) {
-		const time = new Date(unixTime * 1000);
-		return time.toLocaleTimeString("en-US");
-	}
-
 	return (
-		<section className="crr-weather">
-			<div className="crr__header">
-				<p className="crr__header-title">Current Weather</p>
-				{/* <button className="crr__header-toggle">F</button> */}
-			</div>
-			<div className="crr__body">
-				<div className="crr__main">
-					<h3 className="crr__main-location">{data.location}</h3>
-					<div className="crr__main-content">
-						<div className="crr__main-left">
-							<h1 className="crr__main-temp">{Math.round(data.temp)}°</h1>
-							<p className="crr__main-statement">{data.main}</p>
-						</div>
-						<img
-							className="crr__main-icon"
-							src={`./icons/${data.icon}.png`}
-							alt=""
-						/>
-					</div>
+		<section className="weather">
+			<p className="weather__title">Current Weather</p>
+			<div className="weather__body">
+				<p className="weather__location">{data.location}</p>
+				<div className="weather__temp-body">
+					<img
+						src={`./icons/${data.icon}.png`}
+						alt=""
+						className="weather__icon"
+					/>
+					<p className="weather__temp">{data.temp}°</p>
 				</div>
-				<div className="crr__details">
-					<h3 className="crr__details-title">Details</h3>
-					<div className="crr__detials-humidity">
-						<span className="humidity-text">Humidity</span>
-						<span className="humidity-value">{data.humidity} %</span>
-					</div>
-					<div className="crr__detials-wind">
-						<span className="humidity-text">Wind Speed</span>
-						<span className="humidity-value">{data.wind} m/s</span>
-					</div>
-					<div className="crr__detials-sunrise">
-						<span className="humidity-text">Sun Rise</span>
-						<span className="humidity-value">{convertUnix(data.sunrise)}</span>
-					</div>
-					<div className="crr__detials-sunset">
-						<span className="humidity-text">Sun Set</span>
-						<span className="humidity-value">{convertUnix(data.sunset)}</span>
-					</div>
+				<p className="weather__main">{data.main}</p>
+				<div className="weather__details">
+					<p className="weather__detail">
+						<span className="weather__detail-name">Feels Like</span>
+						<span className="weather__detail-value">{data.humidity} °</span>
+					</p>
+					<p className="weather__detail">
+						<span className="weather__detail-name">Wind</span>
+						<span className="weather__detail-value">{data.wind} mps</span>
+					</p>
+					<p className="weather__detail">
+						<span className="weather__detail-name">Visibility</span>
+						<span className="weather__detail-value">{data.visibility} m</span>
+					</p>
+					<p className="weather__detail">
+						<span className="weather__detail-name">Humidity</span>
+						<span className="weather__detail-value">{data.humidity} %</span>
+					</p>
 				</div>
 			</div>
 		</section>
 	);
 }
-
-// export default function WeatherWidget({data}) {
-// 	console.log(data)
-// 	return (
-// 		<div className="wea">
-// 			{ data && 'weather'}
-// 		</div>
-// 	)
-// }

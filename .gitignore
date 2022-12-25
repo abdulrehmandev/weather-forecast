@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # keyfile
-_api_key.js
+config.js

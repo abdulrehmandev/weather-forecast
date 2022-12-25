@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
 import { GEO_API_URL } from "../../_api";
-import { geoApiCities } from "../../_api_key";
+import { geoApiCities } from "../../config";
+import "./search.scss";
 
 export default function Search({ onSearch }) {
 	let [city, setCity] = useState(null);
@@ -33,6 +34,7 @@ export default function Search({ onSearch }) {
 	return (
 		<form className="search-form">
 			<AsyncPaginate
+				className="search"
 				placeholder="Search for City"
 				debounceTimeout={600}
 				onChange={(event) => {
