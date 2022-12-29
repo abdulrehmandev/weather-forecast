@@ -11,8 +11,13 @@ $padding: 1rem 3rem;
 	box-shadow: 2px 3px 7px rgb(0, 0, 0, 0.05);
 }
 
-.weather__title {
-	font-size: 0.8rem;
+.weather__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.weather__title {
+		font-size: 0.8rem;
+	}
 }
 
 .weather__body {
@@ -33,7 +38,6 @@ $padding: 1rem 3rem;
 		}
 		.weather__icon {
 			height: 5rem;
-			aspect-ratio: 1;
 		}
 	}
 	.weather__main {

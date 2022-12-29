@@ -3,7 +3,9 @@ import "./weather-widget.scss";
 export default function WeatherWidget({ data }) {
 	return (
 		<section className="weather">
-			<p className="weather__title">Current Weather</p>
+			<div className="weather__header">
+				<p className="weather__title">Current Weather</p>
+			</div>
 			<div className="weather__body">
 				<p className="weather__location">{data.location}</p>
 				<div className="weather__temp-body">
@@ -18,15 +20,19 @@ export default function WeatherWidget({ data }) {
 				<div className="weather__details">
 					<p className="weather__detail">
 						<span className="weather__detail-name">Feels Like</span>
-						<span className="weather__detail-value">{data.humidity} °</span>
+						<span className="weather__detail-value">{data.feels_like} °</span>
 					</p>
 					<p className="weather__detail">
 						<span className="weather__detail-name">Wind</span>
-						<span className="weather__detail-value">{data.wind} mps</span>
+						<span className="weather__detail-value">
+							{((data.wind * 3600) / 1000).toFixed(1)} kmph
+						</span>
 					</p>
 					<p className="weather__detail">
 						<span className="weather__detail-name">Visibility</span>
-						<span className="weather__detail-value">{data.visibility} m</span>
+						<span className="weather__detail-value">
+							{data.visibility / 1000} km
+						</span>
 					</p>
 					<p className="weather__detail">
 						<span className="weather__detail-name">Humidity</span>

@@ -36,6 +36,7 @@ function App() {
 					sunrise: response.sys.sunrise,
 					sunset: response.sys.sunset,
 				};
+
 				setCrrWeather(_data);
 			})
 			.catch((err) => console.error(err));
@@ -47,6 +48,7 @@ function App() {
 			.then((response) => {
 				let _data = [];
 				let _tempDay = null;
+
 				response.list.forEach((day) => {
 					const time = new Date(day.dt * 1000);
 					if (time.getDate() === _tempDay) return;
@@ -60,6 +62,7 @@ function App() {
 					});
 					_tempDay = time.getDate();
 				});
+
 				setForecast(_data);
 			})
 			.catch((err) => console.error(err));
