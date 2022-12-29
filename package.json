@@ -1,8 +1,8 @@
 {
   "name": "weather-app",
+  "homepage": "./",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://weather-abdev.netlify.app/",
   "type": "module",
   "scripts": {
     "dev": "vite",
