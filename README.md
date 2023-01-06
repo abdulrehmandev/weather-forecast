@@ -1,9 +1,14 @@
-# React Weather Forecast
+# React Weather Forecast App
 
-Weather Forecast App using React
+Languges & Tools used:
+- Html & CSS, SCSS, JavaScript and ReactJS 
 
-Used Api:
+Api's used:
 * [Geo Cities](https://rapidapi.com/wirefreethought/api/geodb-cities/)
 * [Open Weather](https://rapidapi.com/wirefreethought/api/geodb-cities/)
 
-Live preview [here]()
+<br>
+
+## Preview Image
+<br>
+<img src="./Preview-Image.png" alt="weather forecast app preview"/>
