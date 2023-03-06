@@ -6,7 +6,7 @@ $padding: 1rem 3rem;
 	margin-block: $margin-block;
 	border-radius: $border-radius;
 	padding: $padding;
-	background-color: rgb(255, 2555, 255, 0.2);
+	background-color: rgb(255, 2555, 255, 0.4);
 	backdrop-filter: blur(18px);
 	box-shadow: 2px 3px 7px rgb(0, 0, 0, 0.05);
 }
@@ -33,27 +33,27 @@ $padding: 1rem 3rem;
 	gap: 0.25rem;
 }
 
-.forecast__day-icon {
+.forecast__day_icon {
 	height: 3rem;
 	margin-block: 0.5rem;
 }
 
-.forecast__day-temp-row {
+.forecast__day_temp_row {
 	display: flex;
 	gap: 0.5rem;
 	align-items: flex-end;
 }
 
-.forecast__day-temp {
+.forecast__day_temp {
 	font-size: 2rem;
 }
 
-.forecast__day-low {
+.forecast__day_low {
 	color: rgb(0, 0, 0, 0.75);
 	margin-bottom: 0.35rem;
 }
 
-.forecast__day-main {
+.forecast__day_main {
 	font-size: 0.7rem;
 }
 
