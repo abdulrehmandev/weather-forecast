@@ -1,0 +1,61 @@
+$border-radius: 0.25rem;
+$margin-block: 1rem;
+$padding: 1rem 3rem;
+
+.weather {
+	background-color: #fff;
+	background-color: rgb(255, 2555, 255, 0.3);
+	backdrop-filter: blur(18px);
+	margin-block: $margin-block;
+	border-radius: $border-radius;
+	padding: $padding;
+	box-shadow: 2px 3px 7px rgb(0, 0, 0, 0.05);
+}
+
+.weather__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.weather__title {
+		font-size: 0.8rem;
+	}
+}
+
+.weather__body {
+	margin-block: 1rem;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	.weather__location {
+		font-size: 1.5rem;
+	}
+	.weather__temp_body {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		.weather__temp {
+			font-size: 4rem;
+		}
+		.weather__icon {
+			height: 5rem;
+		}
+	}
+	.weather__main {
+		font-size: 1.5rem;
+	}
+	.weather__details {
+		margin-top: 0.75rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1.5rem;
+		max-width: 300px;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.9rem;
+		.weather__detail {
+			display: flex;
+			gap: 0.75rem;
+		}
+	}
+}

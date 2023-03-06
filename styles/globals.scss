@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 *,
 *::before,
@@ -20,11 +20,13 @@ html:focus-within {
 }
 
 body {
+	font-size: 14px;
 	font-family: "Inter", sans-serif;
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 	background-image: url(../public/background/background-image.webp);
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -51,7 +53,7 @@ select {
 }
 
 .container {
-	--max-width: 1040px;
+	--max-width: 900px;
 	width: min(var(--max-width), 100% - 3rem);
 	margin-inline: auto;
 	padding-block: 1rem;
@@ -60,4 +62,4 @@ select {
 .help-text {
 	margin: 2rem auto;
 	text-align: center;
-} */
+}
