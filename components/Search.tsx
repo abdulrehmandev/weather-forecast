@@ -14,7 +14,7 @@ const Search: FunctionComponent<SearchProps> = ({ onSearch }) => {
     onSearch(searchInput);
   }
 
-  const handleOptions = (searchInput: string) => {
+  const handleOptions = (searchInput: any) => {
     return fetch(
       `${GEO_API_URL}/cities?minPopulation=100000&namePrefix=${searchInput}`,
       geoApiCities
