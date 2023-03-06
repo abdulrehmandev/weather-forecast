@@ -22,7 +22,7 @@ const Search: FunctionComponent<SearchProps> = ({ onSearch }) => {
       .then((response) => response.json())
       .then((response) => {
         return {
-          options: response.data.map((city) => {
+          options: response.data.map((city: any) => {
             return {
               value: `${city.latitude} ${city.longitude}`,
               label: `${city.city}, ${city.countryCode}`,
