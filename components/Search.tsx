@@ -40,7 +40,7 @@ const Search: FunctionComponent<SearchProps> = ({ onSearch }) => {
         className="search"
         placeholder="Search for City"
         debounceTimeout={600}
-        onChange={(event: string) => {
+        onChange={(event: any) => {
           handleChange(event);
         }}
         value={city}
